@@ -5,7 +5,6 @@ function getMaxProfit(stockPrices) {
   var max = stockPrices[arrLength - 1];
   var maxIndex = arrLength - 1;
   for (var i = 1; i < arrLength; i++) {
-    console.count();
     if (stockPrices[i] < min) {
       if (i < maxIndex) {
         min = stockPrices[i];
@@ -19,7 +18,7 @@ function getMaxProfit(stockPrices) {
       }
     }
   }
-  console.log(`min: ${min} index: ${minIndex}, max: ${max} index: ${maxIndex}`);
+  console.log(`Buy on day index: ${minIndex} in price ${min}, sell on day index: ${maxIndex} in price: ${max}`);
   return max - min;
 }
 
